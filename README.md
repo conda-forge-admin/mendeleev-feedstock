@@ -48,31 +48,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `mendeleev` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install mendeleev
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install mendeleev
 ```
 
-It is possible to list all of the versions of `mendeleev` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add mendeleev
+# for installing globally
+pixi global install mendeleev
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `mendeleev` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search mendeleev --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search mendeleev --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search mendeleev --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -84,6 +126,8 @@ mamba repoquery whoneeds mendeleev --channel conda-forge
 # List dependencies of `mendeleev`:
 mamba repoquery depends mendeleev --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
