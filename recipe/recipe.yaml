@@ -64,7 +64,7 @@ tests:
 
 about:
   license: MIT
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: A perdioc table of elements API and a database of atomic properties.
   description: |
     This package provides an API for accessing various properties
