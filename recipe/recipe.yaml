@@ -2,8 +2,7 @@ schema_version: 1
 
 context:
   name: mendeleev
-  version: "1.3.0"
-  build: 1
+  version: 1.3.0
 
 package:
   name: ${{ name|lower }}
@@ -14,10 +13,9 @@ source:
   sha256: 24e7bfd2981aedf5fe1ef7f0e4814d78005c47e57320a92097b3fd89313c21c5
 
 build:
-  number: ${{ build }}
-  string: pymin${{ python_min|replace('.', '') }}_h${{ PKG_HASH }}_${{ build }}
+  number: 1
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
       - element.py = mendeleev.cli:clielement
@@ -54,7 +52,7 @@ tests:
         - mendeleev
       pip_check: true
       python_version:
-        - ${{ python_min }}.*
+        - ${{ python_min }}
         - "*"
   - requirements:
       run:
